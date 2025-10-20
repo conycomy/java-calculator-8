@@ -39,6 +39,10 @@ public class Application {
             DelimiterParser parser = new DefaultDelimiterParser();
             DelimiterInfo info = parser.parse(input);
 
+            String numbersToSplit = info.getNumbersString();
+            String finalDelimiterRegex = info.getDelimiterRegex();
+
+            String[] parts = numbersToSplit.split(finalDelimiterRegex);
 
             int sum = 0;
             StringBuilder negativeNumbers = new StringBuilder();
