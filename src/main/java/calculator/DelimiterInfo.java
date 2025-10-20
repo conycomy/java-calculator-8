@@ -15,4 +15,7 @@ public class DelimiterInfo {
         return delimiterRegex;
     }
 
+    public String getNumbersString() {
+        return numbersString;
+    }
 }
