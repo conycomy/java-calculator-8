@@ -14,6 +14,7 @@ public class Application {
                 System.out.println("결과: 0");
                 return;
             }
+/*
 
             String basicDelimiterRegex = "[,:]";
             String finalDelimiterRegex = basicDelimiterRegex;
@@ -32,9 +33,12 @@ public class Application {
 
                 numbersToSplit = input.substring(delimiterEndIndex + 1);
             }
+             String[] parts = numbersToSplit.split(finalDelimiterRegex);
 
+*/
+            DelimiterParser parser = new DefaultDelimiterParser();
+            DelimiterInfo info = parser.parse(input);
 
-            String[] parts = numbersToSplit.split(finalDelimiterRegex);
 
             int sum = 0;
             StringBuilder negativeNumbers = new StringBuilder();
